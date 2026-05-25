@@ -26,5 +26,6 @@ pyotp==2.9.0
 qrcode[pil]==7.4.2
 reportlab==4.2.0
 openpyxl==3.1.2
-ics==0.7.2
+ics==0.7.3
+tatsu==5.9.2
 itsdangerous==2.2.0
