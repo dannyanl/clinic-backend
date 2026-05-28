@@ -16,6 +16,10 @@ DATABASE_URL=postgresql+psycopg2://postgres.ierwmfsazkdenrysscaz:Dioga2508*+@aws
 
 SECRET_KEY=8dkdKCCzaDcvqinCp8bJhYwJnn4AbFY840LDMaeEEZ0
 
+FIRST_ADMIN_EMAIL=admin@clinic.local
+
+FIRST_ADMIN_PASSWORD=Admin1234!
+
 ENVIRONMENT=production
 
 ALGORITHM=HS256
