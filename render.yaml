@@ -9,16 +9,20 @@ services:
       - key: DATABASE_URL
         scope: build,runtime
         sync: false
+        # REQUIRED: Use Supabase (postgresql+psycopg2://user:password@host/db) or Render PostgreSQL
       - key: SECRET_KEY
         scope: build,runtime
         sync: false
+        # REQUIRED: Generate with: python -c "import secrets; print(secrets.token_urlsafe(32))"
       - key: ENVIRONMENT
         value: production
       - key: BACKEND_CORS_ORIGINS
         value: '["https://clinic-frontend.netlify.app"]'
+        # UPDATE: Replace clinic-frontend.netlify.app with your actual Netlify URL
       - key: ACCESS_TOKEN_EXPIRE_MINUTES
         value: "30"
       - key: ALGORITHM
         value: HS256
       - key: PUBLIC_FRONTEND_URL
         value: https://clinic-frontend.netlify.app
+        # UPDATE: Replace with your actual Netlify URL
