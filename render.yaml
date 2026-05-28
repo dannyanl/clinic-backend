@@ -17,12 +17,10 @@ services:
       - key: ENVIRONMENT
         value: production
       - key: BACKEND_CORS_ORIGINS
-        value: '["https://clinic-frontend.netlify.app"]'
-        # UPDATE: Replace clinic-frontend.netlify.app with your actual Netlify URL
+        value: '["https://clinix-team.netlify.app"]'
       - key: ACCESS_TOKEN_EXPIRE_MINUTES
         value: "30"
       - key: ALGORITHM
         value: HS256
       - key: PUBLIC_FRONTEND_URL
-        value: https://clinic-frontend.netlify.app
-        # UPDATE: Replace with your actual Netlify URL
+        value: https://clinix-team.netlify.app
