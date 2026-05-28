@@ -9,7 +9,7 @@ services:
       - key: DATABASE_URL
         scope: build,runtime
         sync: false
-        # REQUIRED: Use Supabase (postgresql+psycopg2://user:password@host/db) or Render PostgreSQL
+        value: postgresql+psycopg2://postgres.vshzowzmpbuzsyxjscoj:Dioga2508*+@aws-1-us-east-2.pooler.supabase.com:5432/postgres
       - key: SECRET_KEY
         scope: build,runtime
         sync: false
