@@ -2,10 +2,17 @@
 
 ## Environment Variables to Set in Render
 
-Copy these exactly as shown. The `*+` characters in the password are correct and safe.
+**IMPORTANT:** Use Supabase Connection **Pooler** (not the direct database URL)
+
+In Supabase:
+1. Project Settings → Database
+2. Connection string selector: Change from "Session" to **"Transaction"** ← THIS IS IMPORTANT
+3. Copy the URL (it should have `pooler.supabase.com`)
+
+Replace `[YOUR-PASSWORD]` below with your actual Supabase password:
 
 ```
-DATABASE_URL=postgresql+psycopg2://postgres:Dioga2508*+@db.ierwmfsazkdenrysscaz.supabase.co:5432/postgres
+DATABASE_URL=postgresql+psycopg2://postgres.ierwmfsazkdenrysscaz:Dioga2508*+@aws-1-us-east-1.pooler.supabase.com:5432/postgres
 
 SECRET_KEY=8dkdKCCzaDcvqinCp8bJhYwJnn4AbFY840LDMaeEEZ0
 
