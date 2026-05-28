@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: clinic-backend
+    runtime: python
+    pythonVersion: 3.12
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    envVars:
+      - key: DATABASE_URL
+        scope: build,runtime
+        sync: false
+      - key: SECRET_KEY
+        scope: build,runtime
+        sync: false
+      - key: ENVIRONMENT
+        value: production
+      - key: BACKEND_CORS_ORIGINS
+        value: '["https://clinic-frontend.netlify.app"]'
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "30"
+      - key: ALGORITHM
+        value: HS256
+      - key: PUBLIC_FRONTEND_URL
+        value: https://clinic-frontend.netlify.app
